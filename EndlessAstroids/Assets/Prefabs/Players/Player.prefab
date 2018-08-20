@@ -240,5 +240,4 @@ MonoBehaviour:
   m_shootSpeed: 2
   m_bulletSpawnPoints:
   - {fileID: 1917450468918744}
-  - {fileID: 0}
   m_bullet: {fileID: 1068265826900260, guid: 9ec3884f9dd67284eba5c02eaf41905f, type: 2}

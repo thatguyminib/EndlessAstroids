@@ -18,5 +18,12 @@ public abstract class Bullet : MonoBehaviour {
         m_rigidbody = GetComponent<Rigidbody>();
         m_rigidbody.AddForce(transform.forward * m_moveSpeed);
     }
-	
+
+    private void OnCollisionEnter(Collision other)
+    {
+       
+        Destroy(gameObject);
+
+    }
+
 }
