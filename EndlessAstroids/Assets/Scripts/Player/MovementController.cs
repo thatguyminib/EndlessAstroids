@@ -33,7 +33,7 @@ public class MovementController : MonoBehaviour {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + m_offset;
         
-        m_playerPos = new Vector3(curPosition.x, -3.35f, 0);
+        m_playerPos = new Vector3(curPosition.x, -3.35f, 2.11f);
         transform.position = m_playerPos;
         m_player.transform.position = m_playerPos;
 
