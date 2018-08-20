@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114983041043203916, guid: 99320128c43ee8946aabda524ede0444,
+        type: 2}
+      propertyPath: m_amountOfAsteroidsToSpawn
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65247854598615820, guid: 99320128c43ee8946aabda524ede0444,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99320128c43ee8946aabda524ede0444, type: 2}
   m_IsPrefabParent: 0
@@ -331,6 +341,11 @@ Prefab:
     - target: {fileID: 4659838146551064, guid: ecc443e0e59d03d4caafac79e2c18c13, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240550756570056, guid: ecc443e0e59d03d4caafac79e2c18c13,
+        type: 2}
+      propertyPath: m_shootSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecc443e0e59d03d4caafac79e2c18c13, type: 2}

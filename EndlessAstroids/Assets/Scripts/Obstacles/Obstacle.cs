@@ -4,9 +4,7 @@ using UnityEngine;
 
 public abstract class Obstacle : MonoBehaviour {
 
-
-
-    private void OnCollisionEnter(Collision other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PlayerBullet")
         {

@@ -20,10 +20,13 @@ public abstract class Bullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other)
-    {
-       
+    {      
         Destroy(gameObject);
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
     }
 
 }
