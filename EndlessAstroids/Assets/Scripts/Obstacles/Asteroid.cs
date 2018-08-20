@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour {
+public class Asteroid : Obstacle {
 
     public GameObject m_asteroid;
 
@@ -20,11 +20,5 @@ public class Asteroid : MonoBehaviour {
         transform.Rotate(m_rotation * m_rotationSpeed);
 	}
 
-    private void OnCollisionEnter(Collision other)
-    {
-       if(other.gameObject.tag == "PlayerBullet")
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 }
