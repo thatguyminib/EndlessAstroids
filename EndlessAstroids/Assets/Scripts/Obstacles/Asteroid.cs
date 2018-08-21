@@ -15,6 +15,8 @@ public class Asteroid : Obstacle {
 
     public int m_amountOfAsteroidsToSpawn;
 
+    bool m_isSmallAsteroid = false;
+
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
@@ -41,13 +43,26 @@ public class Asteroid : Obstacle {
 
     void SpawnSmallerAsteroids()
     {
-        for (int i = 0; i < m_amountOfAsteroidsToSpawn; i++)
+        if (!IsSmallAstroid())
         {
-            GameObject spawnedAsteroid = Instantiate(m_asteroid, transform.position, transform.rotation);
-            float randomScaleSize = Random.Range(.1f, m_asteroid.transform.localScale.x - .35f);
-            spawnedAsteroid.transform.localScale = new Vector3(randomScaleSize, randomScaleSize, randomScaleSize);
-
-            spawnedAsteroid.GetComponent<Rigidbody>().AddForce(Vector3.right * Random.Range(-5, 5), ForceMode.Impulse);
+            for (int i = 0; i < m_amountOfAsteroidsToSpawn; i++)
+            {
+                GameObject spawnedAsteroid = Instantiate(m_asteroid, transform.position, transform.rotation);
+                float randomScaleSize = Random.Range(.1f, m_asteroid.transform.localScale.x - .35f);
+                spawnedAsteroid.transform.localScale = new Vector3(randomScaleSize, randomScaleSize, randomScaleSize);
+                spawnedAsteroid.GetComponent<Asteroid>().SetIsSmallAstroid(true);
+                spawnedAsteroid.GetComponent<Rigidbody>().AddForce(Vector3.right * Random.Range(-3, 3), ForceMode.Impulse);
+            }
         }
+    }
+
+    public void SetIsSmallAstroid(bool _isSmallAstroid)
+    {
+        m_isSmallAsteroid = _isSmallAstroid;
+    }
+
+    public bool IsSmallAstroid()
+    {
+        return m_isSmallAsteroid;
     }
 }
